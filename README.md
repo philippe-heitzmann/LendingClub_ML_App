@@ -4,7 +4,7 @@ The goal of this project is to predict default probabilities of 2018 loans in th
 
 
 
-##### Research Goals 
+### Research Goals 
 
 1. Produce machine learning and deep learning models trained on 2007-2017 data to accurately predict loan defaults in the 2018 loan pool 
 1. Optimize for the best investment opportunity set for an investor looking to maximize his or her returns on the 2018 loan set
@@ -17,6 +17,6 @@ Link to [live presentation](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_chann
 
 
 
-#### Presentation slides
+### Presentation slides
 
 Please further refer to the .pdf file containing presentation slides for the presentation given on January 5th, 2021 to NYCDSA prospective students and alums on this project
