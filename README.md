@@ -1,10 +1,15 @@
-### Project Overview
+## Project Overview
 
 The goal of this project is to predict default probabilities of 2018 loans in the Lending Club portfolio by training our models on pre-2018 loan data in order to uncover the best investment opportunity set for an investor looking to maximize his or her returns on the 2018 loan set. To achieve this, our model’s predicted loan default probabilities for a given loan are combined with that loan’s term (36 or 60 months), monthly installment notional (the amount the debtor pays every month) and funded amount (the initial amount of the loan) in order to produce an expected internal rate of return (IRR) for the loan. Using these predictions, our model then allocates capital to all loans it predicted as good in the 2018 test dataset and does not fund any loans it predicted as bad in order to arrive at an IRR-optimized portfolio.
 
+## Run with Docker 
 
+```
+docker build -t loan_defaults:v1 .
+docker run -it --rm --shm-size 1G -p 8050:8050 -p 5000:5000 --name loan_defaults_app -v ./app:/app loan_defaults:v1 
+```
 
-### Research Goals 
+## Research Goals 
 
 1. Produce machine learning and deep learning models trained on 2007-2017 data to accurately predict loan defaults in the 2018 loan pool 
 1. Optimize for the best investment opportunity set for an investor looking to maximize his or her returns on the 2018 loan set

@@ -24,10 +24,6 @@ lda_path = 'lda_model.pickle'
 with open(lda_path, 'rb') as g:
     LDA = pickle.load(g)
 
-# cat_path = 'fitted_cat1_model.pickle'
-# with open(cat_path, 'rb') as h:
-#     CAT = pickle.load(h)
-
 lg1_path = 'lg1.pickle'
 with open(lg1_path, 'rb') as i:
     LOGIT = pickle.load(i)
@@ -35,15 +31,6 @@ with open(lg1_path, 'rb') as i:
 gbc_path = 'gbc.pickle'
 with open(gbc_path, 'rb') as j:
     GBC = pickle.load(j)
-
-# dependencies = {
-#     'f1': f1
-# }
-
-# model = keras.models.load_model('model.h5', custom_objects=dependencies)
-
-# model = keras.models.load_model('model.h5')
-# print(model.summary())
 
 # rf1_path = 'finalized_model.sav'
 # with open(rf1_path, 'rb') as k:
@@ -57,13 +44,6 @@ with open(gbc_path, 'rb') as j:
     # #loading groupby addr_state, grade data
 # with open('test1.sav','rb') as testsav:
 #      eda3 = pickle.load(testsav)
-
-
-
-#put the model and the script into a Docker Container 
-#have a requirements.txt file with all the required modules required 
-#you would push the Docker image to a registry like DockerHub
-#someone would pull the Docker image from DockerHub 
 
 
 
