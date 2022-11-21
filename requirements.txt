@@ -3,12 +3,12 @@ dash_core_components==1.13.0
 dash_html_components==1.1.1
 dash_bootstrap_components==0.10.7
 dash_table==4.11.0
+numpy
 plotly==4.8.1
 pandas==1.1.0
-numpy==1.18.5
+# numpy==1.18.5
 flask==1.1.2
 flask_restful==0.3.8 
 requests==2.24.0
 pyreadstat==1.0.5
-tensorflow==2.3.1
 joblib==0.16.0

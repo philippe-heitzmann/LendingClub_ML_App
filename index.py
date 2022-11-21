@@ -16,14 +16,10 @@ import plotly.express as px
 import pickle
 import copy
 import plotly.figure_factory as ff
-#Flask
-from flask import Flask
-from flask_restful import reqparse, abort, Api, Resource
 import requests
 
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
-# app.config.requests_pathname_prefix = ''
 app.title = 'Philippe Heitzmann Capstone Project'
 
 app.config.suppress_callback_exceptions = True
@@ -1150,8 +1146,10 @@ def update_graphs(rows, derived_virtual_selected_rows):
               [Input('model_options', 'value')])  
 def make_cutoff_figure(model):
 
-    trace1 = go.Scatter(x=[x[0] for x in cf_diff],
-            y=[x[1] for x in cf_diff], 
+    x = [x[0] for x in cf_diff]
+    y = [x[1] for x in cf_diff]
+    trace1 = go.Scatter(x=x,
+            y=y, 
             name="Dollar Loss", yaxis = 'y1', mode = 'lines+markers',
             line = dict(shape = 'spline', color = '#5dbcd2', smoothing=1,width=1),
             marker = dict(symbol = "diamond-open", color = '#5dbcd2',size = 4),)

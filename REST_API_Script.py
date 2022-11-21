@@ -1,23 +1,11 @@
 from flask import Flask
-from flask_restful import reqparse, abort, Api, Resource
-import requests
-import numpy as np
-import pandas as pd  
+from flask_restful import reqparse, Api, Resource
+import numpy as np  
 from flask import request
 import pickle 
-import pyreadstat
-from tensorflow import keras 
-# from f1_metric import f1
-import joblib
 
 
-# dash_app.config.supress_callback_exceptions = True
-
-# # Use DispatcherMiddleware to route separate apps into one
-# flask_app.wsgi_app = DispatcherMiddleware(app, {'/dash': dash_app.server})
-
-
-#creating our app and API
+# Creating our app and API
 app = Flask(__name__)
 api = Api(app)
 
