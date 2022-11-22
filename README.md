@@ -32,7 +32,7 @@ bash build_e2e.sh
     </a>
 </div>
 
-
+  
 
 2. Loan default rates & interest rates vs FICO score:
 
@@ -42,7 +42,7 @@ bash build_e2e.sh
     </a>
 </div>
 
-
+  
 
 3. Retrieve live ML model default predictions on sample anonymized customer data:
 
@@ -51,6 +51,7 @@ bash build_e2e.sh
         <img src="./images/predict_models.gif" width="79%"/>
     </a>
 </div>
+
 
 ## Dataset
 - See [Kaggle dataset](https://www.kaggle.com/datasets/ethon0426/lending-club-20072020q1)
