@@ -1,0 +1,14 @@
+FROM python:3.6
+
+WORKDIR /app
+COPY . /app
+
+RUN apt-get update && apt-get install -y sudo vim
+RUN sudo apt install python3.9-distutils 
+
+RUN pip install --upgrade pip
+RUN pip install -r /app/app/frontend/requirements_frontend.txt
+
+EXPOSE 8050
+
+CMD ["python", "/app/app/frontend/app.py"] 

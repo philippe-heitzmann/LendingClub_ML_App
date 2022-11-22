@@ -1,0 +1,13 @@
+dash
+dash_core_components 
+dash_html_components
+dash_bootstrap_components
+dash_table
+flask
+flask_restful
+joblib 
+numpy
+pandas
+plotly
+scikit-learn==0.23.2
+requests

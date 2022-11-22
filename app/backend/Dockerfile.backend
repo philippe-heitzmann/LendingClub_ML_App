@@ -1,0 +1,10 @@
+FROM python:3.6
+
+WORKDIR /app
+COPY . /app
+
+RUN pip install -r /app/app/backend/requirements_backend.txt
+
+EXPOSE 5000
+
+CMD ["python","/app/app/backend/flask_serve.py"]
