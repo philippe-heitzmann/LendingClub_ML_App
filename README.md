@@ -32,6 +32,8 @@ bash build_e2e.sh
     </a>
 </div>
 
+
+
 2. Loan default rates & interest rates vs FICO score:
 
 <div align="center">
@@ -39,6 +41,8 @@ bash build_e2e.sh
         <img src="./images/lineplots_bargraphs.gif" width="79%"/>
     </a>
 </div>
+
+
 
 3. Retrieve live ML model default predictions on sample anonymized customer data:
 
@@ -56,7 +60,7 @@ bash build_e2e.sh
 
 - Link to [blog post](https://nycdatascience.com/blog/student-works/predicting-loan-defaults-using-machine-learning-classification-models/) 
 
-- Link to [live presentation](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_channel=NYCDataScienceAcademy)
+- Link to [live presentation](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_channel=NYCDataScienceAcademy) (youtube)
 
 
 ## Presentation slides
