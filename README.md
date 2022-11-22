@@ -22,11 +22,16 @@ Manually:
 - See /app/backend/build_backend.md for instructions on how to manually build backend
 - See /app/frontend/build_frontend.md for instructions on how to manually build frontend
 
-
 ## Sample app visualizations
 <div align="center">
     <a href="./">
         <img src="./images/choropleth.gif" width="79%"/>
+    </a>
+</div>
+
+<div align="center">
+    <a href="./">
+        <img src="./images/lineplots_bargraphs.gif" width="79%"/>
     </a>
 </div>
 
@@ -36,18 +41,18 @@ Manually:
 
 ## Research Goals 
 
-1. Produce machine learning and deep learning models trained on 2007-2017 data to accurately predict loan defaults in the 2018 loan pool 
-1. Optimize for the best investment opportunity set for an investor looking to maximize his or her returns on the 2018 loan set
-1. Construct real-time machine learning prediction tools to allow investors to leverage classification models for portfolio construction
+1. Train machine learning and deep learning models on 2007-2017 Lending club data to accurately predict loan defaults in the 2018 loan pool 
+1. Leverage predictions from (1) to optimize portfolio of 2018 loans maximizing investment returns (IRR) for a given investor
+1. Construct real-time machine learning prediction tools to allow users to leverage classification models for portfolio construction
 
-To achieve this, our model’s predicted loan default probabilities for a given loan are combined with that loan’s term (36 or 60 months), monthly installment notional (the amount the debtor pays every month) and funded amount (the initial amount of the loan) in order to produce an expected internal rate of return (IRR) for the loan. Using these predictions, our model then allocates capital to all loans it predicted as good in the 2018 test dataset and does not fund any loans it predicted as bad in order to arrive at an IRR-optimized portfolio.
+- To achieve (2), our model’s predicted loan default probabilities for a given loan are combined with that loan’s term (36 or 60 months), monthly installment notional (the amount the debtor pays every month) and funded amount (the initial amount of the loan) in order to produce an expected internal rate of return (IRR) for that loan 
+- Highest IRR-yielding loans are then picked from this filtered output to maximize IRR for a given portfolio notional
 
 ## Blog post + live presentation
 
-Link to [blog post](https://nycdatascience.com/blog/student-works/predicting-loan-defaults-using-machine-learning-classification-models/).  
+- Link to [blog post](https://nycdatascience.com/blog/student-works/predicting-loan-defaults-using-machine-learning-classification-models/) 
 
-Link to [live presentation](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_channel=NYCDataScienceAcademy)
-
+- Link to [live presentation](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_channel=NYCDataScienceAcademy)
 
 
 ## Presentation slides
