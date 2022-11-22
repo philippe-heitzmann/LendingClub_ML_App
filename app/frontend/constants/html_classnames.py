@@ -1,0 +1,8 @@
+CLASSNAME_ROW = "row"
+CLASSNAME_COL_CENTERED = "col-centered"
+CLASSNAME_EIGHT_COLUMNS = "eight columns"
+CLASSNAME_PRETTY_CONTAINER = "pretty_container"
+CLASSNAME_DCC_CONTROL = "dcc_control"
+CLASSNAME_PRETTY_CONTAINER_4C = "pretty_container four columns"
+CLASSNAME_CONTROL_LABEL = "control_label"
+CLASSNAME_INFO_TEXT = "info_text"
