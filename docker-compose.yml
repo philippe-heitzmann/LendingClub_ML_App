@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+   frontend:
+     depends_on:
+       - backend
+     image: dash_frontend:v1
+     restart: always
+     ports:
+       - "8050:8050"
+
+   backend:
+     image: flask_backend:v1
+     ports:
+       - "5000:5000"
+     restart: always

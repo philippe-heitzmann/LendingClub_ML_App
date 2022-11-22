@@ -18,51 +18,53 @@ import copy
 import plotly.figure_factory as ff
 import requests
 
+
+URL = 'http://172.20.0.2:5000/predict'
+
 # Create app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
 app.title = 'Philippe Heitzmann Capstone Project'
 app.config.suppress_callback_exceptions = True
 
 # Create server
-server = app.server  # <== ADD THIS LINE
-
+server = app.server  
 
 #Load data
-df = pd.read_csv('./data/accepted_2007_to_2018Q4_500.csv', sep = ',')
+df = pd.read_csv('/app/app/data/accepted_2007_to_2018Q4_500.csv', sep = ',')
 print('DF shape: ', df.shape)
 df.set_index('id', inplace = True)
 df['emp_length'].fillna('5 years', inplace = True)
 df1 = pd.DataFrame(df.groupby(['emp_length'])['annual_inc'].mean()).reset_index()
 
 #loading groupby addr_state, emp_length, data
-with open('/data/eda1.pickle','rb') as eda1File:
-     eda1 = pickle.load(eda1File)
+with open('/app/app/data/eda1.pickle','rb') as edaFile:
+     eda1 = pickle.load(edaFile)
 
 #loading groupby addr_state, Year data
-with open('/data/eda2.pickle','rb') as eda2File:
-     eda2 = pickle.load(eda2File)
+with open('/app/app/data/eda2.pickle','rb') as edaFile:
+     eda2 = pickle.load(edaFile)
 
 #loading groupby addr_state, grade data
-with open('/data/eda3.pickle','rb') as eda3File:
-     eda3 = pickle.load(eda3File)
+with open('/app/app/data/eda3.pickle','rb') as edaFile:
+     eda3 = pickle.load(edaFile)
 
 # #loading groupby addr_state, grade data
 # with open('test1.sav','rb') as testsav:
 #      eda3 = pickle.load(testsav)
 
 #loading groupby addr_state, grade, int data
-with open('/data/eda4.pickle','rb') as eda4File:
-     eda4 = pickle.load(eda4File)
+with open('/app/app/data/eda4.pickle','rb') as edaFile:
+     eda4 = pickle.load(edaFile)
 
 #loading groupby addr_state, grade, int data
-with open('/data/eda5.pickle','rb') as eda5File:
-     eda5 = pickle.load(eda5File)
+with open('/app/app/data/eda5.pickle','rb') as edaFile:
+     eda5 = pickle.load(edaFile)
 
-with open('/data/x_train_lg1.pickle','rb') as x_train_lg1_file:
-    x_train_lg1 = pickle.load(x_train_lg1_file)
+with open('/app/app/data/x_train_lg1.pickle','rb') as inputDataFile:
+    x_train_lg1 = pickle.load(inputDataFile)
 
-with open('/data/test_data2.pickle','rb') as test_data2_file:
-    test_data2 = pickle.load(test_data2_file)
+with open('/app/app/data/test_data2.pickle','rb') as inputDataFile:
+    test_data2 = pickle.load(inputDataFile)
 
 test_data2['Predicted_IRR'] = np.round(test_data2['Predicted_IRR'], 4)
 test_data2['True_IRR'] = np.round(test_data2['True_IRR'], 4)
@@ -194,31 +196,28 @@ tree_models = [{'label':'Gradient Boosting', 'value':'GBC'}, {'label':'Random Fo
                 {'label':'Catboost Classifier', 'value':'CAT'}]
 
 
-url = 'http://127.0.0.1:5000/'
-
-
 @app.callback(Output('predictionText', 'children'),
               [Input('id_options', 'value'),
                Input('model_options', 'value')])
 def update_prediction_text(id1, model):
-
+    '''Update prediction text (default or no default) for a given model prediction on a given input observation (denoted by ID)'''
     test1 =[list(np.array(x_train_lg1.loc[id1, :]))]
 
     params ={'query':test1, 'model':model}   #test1 is the data to be passed 
-    response = requests.get(url, json = params)
+    response = requests.get(URL, json = params)
     return response.json()['prediction']
+
 
 @app.callback(Output('probabilityText', 'children'),
               [Input('id_options', 'value'),
                Input('model_options', 'value')])
 def update_probability_text(id1, model):
-
+    '''Update predicted probability text for a given model prediction on a given input observation (denoted by ID)'''
     print('ID is',id1,'Model is', model)
-
     test1 =[list(np.array(x_train_lg1.loc[id1, :]))]
     
     params ={'query':test1, 'model':model}   #test1 is the data to be passed 
-    response = requests.get(url, json = params)
+    response = requests.get(URL, json = params)
 
     if response.json()['prediction'] == 'No Default':
         return np.round(response.json()['confidence'][1],2)
@@ -1549,8 +1548,6 @@ def make_reg1_figure(main_graph_hover):
               [Input('main_graph', 'hoverData')])
 def make_reg2_figure(main_graph_hover):
 
-    layout_individual = copy.deepcopy(layout)
-
     if main_graph_hover is None:
         main_graph_hover = {'points': [{'location':'MA'}]}
 
@@ -1608,5 +1605,4 @@ def make_reg2_figure(main_graph_hover):
 
 
 if __name__ == '__main__':
-    print('APP ', app)
     app.run_server(host='0.0.0.0', port='8050', debug=True)
