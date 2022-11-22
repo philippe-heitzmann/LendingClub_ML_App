@@ -31,8 +31,7 @@ bash build_e2e.sh
         <img src="./images/choropleth.gif" width="79%"/>
     </a>
 </div>
-
-  
+&nbsp;  
 
 2. Loan default rates & interest rates vs FICO score:
 
@@ -41,8 +40,7 @@ bash build_e2e.sh
         <img src="./images/lineplots_bargraphs.gif" width="79%"/>
     </a>
 </div>
-
-  
+&nbsp;  
 
 3. Retrieve live ML model default predictions on sample anonymized customer data:
 
