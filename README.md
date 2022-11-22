@@ -9,7 +9,8 @@
 
 ## Build and run app
 
-If docker-compose not already installed, see installation [instructions](https://docs.docker.com/compose/gettingstarted/) 
+- This app uses docker-compose to run and network our `frontend` and `backend` services
+- If docker-compose not already installed, see installation [instructions](https://docs.docker.com/compose/gettingstarted/) 
 
 **Scripted e2e**:
 ```
