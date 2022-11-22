@@ -9,7 +9,7 @@
 
 ## Build and run app
 
-If not already installed, see [instructions](https://docs.docker.com/compose/gettingstarted/) for how to install Docker compose
+If docker-compose not already installed, see installation [instructions](https://docs.docker.com/compose/gettingstarted/) 
 
 Scripted e2e:
 ```
@@ -23,11 +23,16 @@ Manually:
 - See /app/frontend/build_frontend.md for instructions on how to manually build frontend
 
 ## Sample app visualizations
+
+1. Distributions of loan grades by state:
+
 <div align="center">
     <a href="./">
         <img src="./images/choropleth.gif" width="79%"/>
     </a>
 </div>
+
+1. Default rates and interest rate by FICO score:
 
 <div align="center">
     <a href="./">
