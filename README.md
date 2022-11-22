@@ -64,4 +64,4 @@ bash build_e2e.sh
 
 ## Presentation slides
 
-Please refer to **/presentation/NYCDSA_Capstone_Presentation_vF.pdf** for presentation slides of presentation given on January 5th, 2021 to NYCDSA prospective students and alums regarding this project
+Please refer to **/presentation/NYCDSA_Capstone_Presentation_vF.pdf** for slides of presentation given on January 5th, 2021 to NYCDSA prospective students and alums regarding this project
