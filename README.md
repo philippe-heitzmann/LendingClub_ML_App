@@ -1,4 +1,4 @@
-# 🏦 LendingClub ML App
+# LendingClub ML App
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://docker.com)
@@ -7,17 +7,17 @@
 
 > A comprehensive machine learning application for predicting loan defaults and optimizing investment portfolios using the LendingClub dataset.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project demonstrates advanced machine learning techniques applied to financial risk assessment. The application trains multiple classification models on historical LendingClub loan data to predict default probabilities, then uses these predictions to construct an IRR-optimized investment portfolio.
 
 ### Key Features
 
-- **🤖 Multiple ML Models**: 8+ different algorithms including Logistic Regression, Random Forest, Gradient Boosting, and Neural Networks
-- **📊 Interactive Dashboard**: Real-time visualization of loan data, model performance, and portfolio optimization
-- **💰 Portfolio Optimization**: IRR-based portfolio construction with customizable investment criteria
-- **🔮 Live Predictions**: Real-time loan default predictions via REST API
-- **📈 Advanced Analytics**: Comprehensive EDA with interactive choropleth maps and statistical analysis
+- **Multiple ML Models**: 8+ different algorithms including Logistic Regression, Random Forest, Gradient Boosting, and Neural Networks
+- **Interactive Dashboard**: Real-time visualization of loan data, model performance, and portfolio optimization
+- **Portfolio Optimization**: IRR-based portfolio construction with customizable investment criteria
+- **Live Predictions**: Real-time loan default predictions via REST API
+- **Advanced Analytics**: Comprehensive EDA with interactive choropleth maps and statistical analysis
 
 ### Business Impact
 
@@ -26,7 +26,7 @@ This project demonstrates advanced machine learning techniques applied to financ
 - **1.51% and 0.99% alpha** over baseline for 36-month and 60-month loans respectively
 - **Statistically significant** results at 1% confidence level
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -76,7 +76,7 @@ python app.py
 - **Backend API**: http://localhost:5000
 - **API Documentation**: http://localhost:5000/api/v1/predict
 
-## 📊 Application Screenshots
+## Application Screenshots
 
 ### 1. Interactive Choropleth Map - Loan Default Rates by State
 <div align="center">
@@ -179,18 +179,18 @@ LendingClub_ML_App/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📚 Resources
+## Resources
 
 - **Dataset**: [LendingClub 2007-2020Q1](https://www.kaggle.com/datasets/ethon0426/lending-club-20072020q1)
 - **Blog Post**: [Predicting Loan Defaults using ML](https://nycdatascience.com/blog/student-works/predicting-loan-defaults-using-machine-learning-classification-models/)
 - **Video Presentation**: [YouTube](https://www.youtube.com/watch?v=1U1pIe5-GZ0&ab_channel=NYCDataScienceAcademy)
 - **Presentation Slides**: [PDF](./presentation/NYCDSA_Capstone_Presentation_vF.pdf)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Philippe Heitzmann**
 - Email: philheitz6[at]gmail[dot]com
